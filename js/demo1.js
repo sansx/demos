@@ -6,9 +6,9 @@ setInterval(function () {
 }, 1000);
 
 
-setInterval(function () {
-    minutePlay()
-}, 10000);
+// setInterval(function () {
+//     minutePlay()
+// }, 10000);
 
 
 function secondPlay() {
