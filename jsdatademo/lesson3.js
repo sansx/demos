@@ -69,7 +69,7 @@ class Stack{
 /**fn3:用WeakMap实现
  * 使用此方法扩展类无法继承私有属性
  */
-let Stack = (function(){
+export var Stack = (function(){
     const items = new WeakMap()
     class Stack{
         constructor(){
@@ -107,7 +107,6 @@ let Stack = (function(){
     return Stack
 })()
 
-export default Stack
 
 
 
