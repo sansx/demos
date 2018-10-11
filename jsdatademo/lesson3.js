@@ -33,7 +33,7 @@ Stack.prototype = {
 }
 
 let stack = new Stack()
-console.log(stack.isEmpty());
+// console.log(stack.isEmpty());
 }
 
 //es6
@@ -69,7 +69,7 @@ class Stack{
 /**fn3:用WeakMap实现
  * 使用此方法扩展类无法继承私有属性
  */
-export var Stack = (function(){
+let Stack = (function(){
     const items = new WeakMap()
     class Stack{
         constructor(){
@@ -108,5 +108,5 @@ export var Stack = (function(){
 })()
 
 
-
+export  {Stack as default};
 
