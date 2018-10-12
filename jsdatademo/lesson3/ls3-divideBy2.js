@@ -45,6 +45,6 @@ function divideByN(num){
 }
 
 
-let newfn = divideByN(5)
-console.log(newfn(1200));
+let newfn = divideByN(2)
+console.log(newfn(10));
 
