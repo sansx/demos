@@ -1,5 +1,5 @@
 // @ts-check
-import Stack from './lesson3';
+import Stack from './Stack';
 
 export function parenthesesChecker(symbols) {
   const stack = new Stack();

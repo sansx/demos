@@ -1,4 +1,4 @@
-import Stack from "./lesson3.js"
+import Stack from "./Stack.js"
 
 let stack = new Stack()
 
