@@ -1,8 +1,11 @@
+
 import Stack from "./Stack.js"
 
 let stack = new Stack()
 
-// console.log(stack.isEmpty());
+/**进制转化*/
+
+
 /**
  * 
  * @param {Number} decnum 
