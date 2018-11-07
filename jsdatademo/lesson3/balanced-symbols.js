@@ -1,4 +1,7 @@
 // @ts-check
+/**平衡圆括号
+ * 
+ */
 import Stack from './Stack';
 
 export function parenthesesChecker(symbols) {

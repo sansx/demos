@@ -61,6 +61,6 @@ typings/
 .next
 
 
-dist/
+dist
 
-.cache/
+.cache
