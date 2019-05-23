@@ -1,0 +1,38 @@
+body, html {
+    height: 100%;
+}
+
+.box{
+    width: 100%;
+    background: #eee;
+    display: flex;
+
+}
+
+
+
+.leftbox{
+    width: 100%;
+    background: #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.rightbox{
+    width: 30%;
+    background: #666;
+}
+
+.ticket{
+    width: 28%;
+    height: 300px;
+    margin: 2%;
+    background: #111;
+}
+
+.fillbox{
+    height: 100%;
+    width: 100%;
+}
+
