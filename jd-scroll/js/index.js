@@ -15,31 +15,37 @@ window.onload = () => {
 }
 
 const spanFn = el => {
-    let num = $(el.currentTarget).attr("index")
+    let target = $(el.currentTarget)
+    let num = target.attr("index")
     const spanWidth = parseFloat($(".list span").eq(0).css("width"))
+    $(".list span").removeClass("centerTitle").addClass("smallFt")
+    target.addClass("centerTitle")
     if (num === 0) return;
     let cloneBox = []
+    num>0?target.css({"left":"none","right":0}):target.css({"right":"none","left":0})
     for (let i = 0; i < Math.abs(num); i++) {
-        if(num > 0){
-            cloneBox.push($(".list span").eq(-i-1).clone())
-        }
+        cloneBox.push($(".list span").eq(num > 0?-(i+1):i).clone())
     }
     cloneBox.map(el=>{
         el.on("click",spanFn)
         num<0?$(".list").append(el):$(".list").prepend(el)
     })
-    let res = $(".list span").eq(0).clone()
-    const moveArr = [[0, num * spanWidth]]
+    const moveArr = [0, -Math.abs(num * spanWidth) ]
     let obj = {
         targets: ".list",
         duration: 300,
         easing: 'easeInOutQuad',
+        update:anim => {
+            if (anim.progress<50)return;
+            if ($(".list span").hasClass("smallFt")) {
+                $(".list span").removeClass("smallFt")
+            } 
+        },
         complete: function (anim) {
             for (let i = 0; i < Math.abs(num); i++) {
                 $(".list span").eq(num>0?-1:0).remove()
             }
-            // $(".list span").eq(0).remove()
-            // $(".list").css("left", 0)
+            $(".list").css({"left":"","right":""})
             indexSpan()
         }
     }

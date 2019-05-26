@@ -13,25 +13,25 @@
 .list{
     position: absolute;
     white-space: nowrap;
-    left: 0;
+    /* left: 0; */
     /* right: 0; */
     /* display: flex; */
 }
 
 .list>span{
-    transition: all .6s ease;
-    width: 4rem;
+    transition: all .3s ease;
+    width: 5rem;
     text-align: center;
     display: inline-block;
 }
 
 .smallFt{
-    /* font-size: 12px; */
+    font-size: 10px;
 }
 
 .centerTitle{
-    font-size: 20px;
-    margin: 10px;
+    font-size: 30px;
+    margin: 40px;
 }
 
 .scrollBox{
