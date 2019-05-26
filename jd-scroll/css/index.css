@@ -1,0 +1,43 @@
+.headerBox{
+    height: 100px;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+}
+
+.flexBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list{
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    /* right: 0; */
+    /* display: flex; */
+}
+
+.list>span{
+    transition: all .6s ease;
+    width: 4rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.smallFt{
+    /* font-size: 12px; */
+}
+
+.centerTitle{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.scrollBox{
+    /* transition: all .6s ease; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
