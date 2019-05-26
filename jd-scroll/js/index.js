@@ -36,7 +36,7 @@ const spanFn = el => {
         duration: 300,
         easing: 'easeInOutQuad',
         update:anim => {
-            if (anim.progress<50)return;
+            if (anim.progress<30)return;
             if ($(".list span").hasClass("smallFt")) {
                 $(".list span").removeClass("smallFt")
             } 
