@@ -17,8 +17,6 @@ window.onload = () => {
   $(".scrollBox").css("width", $(".list").css("width"));
   $(".list span").on("click", spanFn);
   $(".leftBtn").on("click",()=>{
-    console.log("111");
-    
     $(".list span").eq(2).trigger("click")
   })
   $(".rightBtn").on("click",()=>{
