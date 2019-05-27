@@ -1,9 +1,10 @@
 let titles = ["aaaa", "bbbb", "cccc", "dddd", "eee", "ffff", "gggg"];
 const infoBox = [...Object.keys(titles)].map(res => res.repeat(res * 1 + 1));
-
+let isAnime = false
 window.onload = () => {
   let list = $(".list");
   let titlesCon = "";
+  
   titles.map((res, index) => {
     titlesCon += `<span key=${index} >
             ${res}
@@ -15,9 +16,19 @@ window.onload = () => {
   setAll();
   $(".scrollBox").css("width", $(".list").css("width"));
   $(".list span").on("click", spanFn);
+  $(".leftBtn").on("click",()=>{
+    console.log("111");
+    
+    $(".list span").eq(2).trigger("click")
+  })
+  $(".rightBtn").on("click",()=>{
+    $(".list span").eq(4).trigger("click")
+  })
 };
 
 const spanFn = el => {
+  if(isAnime)return
+  isAnime=true
   let target = $(el.currentTarget);
   let num = target.attr("index");
   setAll(target.attr("key"));
@@ -65,6 +76,7 @@ const spanFn = el => {
       }
       $(".list").css({ left: "", right: "" });
       indexSpan();
+      isAnime=false
     }
   };
   num < 0 ? (obj.left = moveArr) : (obj.right = moveArr);
