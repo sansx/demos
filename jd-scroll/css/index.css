@@ -101,6 +101,10 @@
     margin-top: 30px;
 }
 
+.contain .items{
+    display: none;
+}
+
 .btnBox{
     display: inline-flex;
     width: 160px;
