@@ -32,10 +32,10 @@ export default class test extends Component {
     return (
       <div className="wrapper">
         <div>
-          <span className="content" style={{ height: "500px", display: "inline-block",border:"1px solid red" }} >
+          <span className="content" style={{ height: "500px", display: "inline-block", border: "1px solid red" }} >
 
             asdsd
- <ul className="content">
+            <ul className="content">
               {num && [...new Array(num)].map((res, index) => {
                 console.log(res);
                 return (<li key={index} >...</li>)
